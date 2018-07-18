@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="33px" viewBox="0 0 36 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>pocket</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="For-Agency" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-560.000000, -1123.000000)">
+            
+            <g id="pocket" transform="translate(561.000000, 1124.000000)" stroke="#4957B8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M3.4,0 L30.6,0 C32.4777681,0 34,1.54213031 34,3.44444444 L34,13.7777778 C34,23.2893485 26.3888407,31 17,31 C12.4913197,31 8.16730315,29.1855211 4.97918472,25.9557279 C1.79106629,22.7259347 3.77475828e-16,18.3453951 0,13.7777778 L0,3.44444444 C-3.77475828e-16,1.54213031 1.52223185,0 3.4,0 Z" id="Shape"></path>
+                <polyline id="Shape" points="10 12 17 19 24 12"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

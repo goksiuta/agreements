@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="185px" height="32px" viewBox="0 0 185 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="For-Agency" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-61.000000, -37.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="5088"></rect>
+            <g id="logo" transform="translate(61.000000, 37.000000)">
+                <g id="Logo">
+                    <rect id="Rectangle-3" fill="#FFFFFF" x="0" y="0" width="32" height="32"></rect>
+                    <g id="crown.53" stroke-width="1" transform="translate(0.000000, 3.000000)" fill="#000000">
+                        <path d="M13.736875,2.042125 C13.736875,0.972073297 14.6043233,0.104625 15.674375,0.104625 C16.7444267,0.104625 17.611875,0.972073297 17.611875,2.042125 C17.611875,3.1121767 16.7444267,3.979625 15.674375,3.979625 C15.1605181,3.979625 14.6677073,3.77549612 14.3043556,3.41214439 C13.9410039,3.04879266 13.736875,2.55598195 13.736875,2.042125 Z M7.75,9.970375 C3.46979319,9.970375 6.88338275e-16,13.4401682 0,17.720375 L0,25.470375 L6.3395,25.470375 L6.3395,15.95725 C6.33637607,13.7917735 7.07637076,11.6907904 8.435875,10.00525 C8.211125,9.985875 7.9825,9.970375 7.75,9.970375 Z M23.25,9.970375 C24.624571,11.6625452 25.373234,13.7771417 25.369625,15.95725 L25.369625,25.470375 L31,25.470375 L31,17.720375 C31,15.6649472 30.1834845,13.6937044 28.7300776,12.2402974 C27.2766706,10.7868905 25.3054278,9.970375 23.25,9.970375 Z M15.69375,6.544875 C12.8369358,6.54341131 10.1379576,7.85503758 8.373875,10.102125 C12.3472707,10.4831612 15.3731208,13.8334497 15.348875,17.825 C15.3209521,13.5755825 18.7409862,10.1069881 22.990375,10.075 C21.2258874,7.84450054 18.5377865,6.54399073 15.69375,6.544875 Z" id="Shape" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+                <text id="BlockContract" font-family="SanFranciscoDisplay-Semibold, San Francisco Display" font-size="20" font-weight="500" fill="#41484F">
+                    <tspan x="59.1015625" y="27">BlockContract</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
