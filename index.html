@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>BlockContract – Agreements and courts system on blockchain</title>
     <link rel="stylesheet" href="css/mystyles.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
     <style>
      a {   text-transform: uppercase; font-weight: 500; letter-spacing: 1.23px }
      #CTA { font-size: 18px; padding: 30px 90px 30px 90px }
@@ -14,7 +16,8 @@
      #advantages img {margin-bottom: 10px}
     </style>
   </head>
-  <body>
+  <body >
+    <div id="app"> 
 <section class="container">
   <nav>
     <div class="navbar-brand">
@@ -48,20 +51,18 @@
   <section class="section" style="padding-bottom:0">
     <div class="container has-text-centered" style="margin-bottom:70px">
       <h1 class="title has-text-weight-light is-size-1" >
-        Agreements on the Ethereum blockchain Github
+       {{Header}}
       </h1>
       
       <div class="columns ">
       <div class="column"></div>
         <div class="column is-two-thirds has-text-grey-light is-light subtitle has-text-weight-light is-size-3 is-paddingless">
-        
-          Create agreements with ease and store safely on the blockchain.
-        
+        <div > {{Subheader}} </div>
       </div> 
       <div class="column"></div>      
     </div>
 
-      <a id="CTA" class="button is-primary is-large">Check our Prototype</a>
+      <a id="CTA" class="button is-primary is-large">{{ButtonLink}}</a>
     </div>
     <div class="hero is-large" style="background:url('img/Background_img_hero.svg') top center; background-size:cover">
       <div class="container has-text-centered" style="padding-top:30px">
@@ -101,5 +102,7 @@
   </div>
 
   </section>
+</div>
   </body>
 </html>
+<script src="js/content.js"></script>
