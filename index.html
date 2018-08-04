@@ -18,35 +18,11 @@
   </head>
   <body >
     <div id="app"> 
-<section class="container">
-  <nav>
-    <div class="navbar-brand">
-    <!-- Logo !-->
-       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-           <img src="img/logo.svg" alt="Bulma: a modern CSS framework based on Flexbox" width="186" height="32">
-        </a>
-    </div>
 
-     <!-- Right side !--> 
-     <div class="navbar-menu">
-         <div class="navbar-end">
-            <p v-for="item in menu" class="navbar-item">
-              <a :href="item.link">
-               {{item.value}}
-              </a>
-           </p>
+<!-- HEADER COMPONENT -->
+  <header-component :array="menu">
+  </header-component> 
 
-          <p class="navbar-item">
-              <a class="button" href="#">
-                Contact
-              </a>
-          </p>
-            
-         </div> 
-   </div>
-  </nav> 
-</section>
 
   <section class="section" style="padding-bottom:0">
     <div class="container has-text-centered" style="margin-bottom:70px">
@@ -71,37 +47,13 @@
     </div>
   </section>
 
-  <section id="advantages" class="section has-background-dark is-marginless">
-    <div class="container">
-    <div class="columns"> 
-      
-      <div class="column">
-        <figure class="has-background-dark">
-            <img src="img/feather.svg">
-        </figure>
-        <h2 class="has-text-white has-text-weight-light is-size-4">Streamline the contracting process.</h2>
-        <p class="has-text-grey has-text-weight-light is-size-5">Prepare and sign agreements in a flash and share it with your contractors.</p> 
-      </div>
-      <div class="column">
-      <figure class="has-background-dark">
-            <img src="img/pocket.svg">
-        </figure>
-        <h2 class="has-text-white has-text-weight-light is-size-4">Reduce cost of legal services.</h2>
-        <p class="has-text-grey has-text-weight-light is-size-5">Simplify the contracting process and make agreements clear and understandable. Save on expensive legal services.</p> 
-      </div>
-      <div class="column">
-        <figure class="has-background-dark">
-            <img src="img/lock.svg">
-        </figure>
-        <h2 class="has-text-white has-text-weight-light is-size-4">Improve security and compliance.</h2>
-        <p class="has-text-grey has-text-weight-light is-size-5">Both parties can rest assure the documents they signed are stored in a safe and immutable way.</p> 
+  <!-- FEATURES COMPONENT -->
+  <features-section :array="features"></features-section>
 
-      </div>
-      
-    </div>
-  </div>
 
-  </section>
+
+
+  
 </div>
   </body>
 </html>
