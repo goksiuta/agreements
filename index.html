@@ -14,6 +14,29 @@
      #CTA { font-size: 18px; padding: 30px 90px 30px 90px }
      #advantages .column { padding: 40px 5% 40px 5% }
      #advantages img {margin-bottom: 10px}
+
+     ul.slider li.active a { /* Rectangle 9: */
+      background: #F5F6F7;
+      border: 1px solid #E8EBED;
+      border-radius: 4px;
+      color: #41484F;
+
+      }
+      ul.slider li {
+      }
+
+      ul.slider li a {
+      padding:16px 32px; 
+      font-family: SanFranciscoDisplay-Light;
+      font-size: 20px;
+      color: #9EA7B0;
+      line-height: 42px; 
+      text-transform: none;
+      display: inline-block;
+      width: 100%;
+      letter-spacing: 0.1px
+       }
+
     </style>
   </head>
   <body >
@@ -49,6 +72,40 @@
 
   <!-- FEATURES COMPONENT -->
   <features-section :array="features"></features-section>
+
+
+  <!-- How it works -->
+  <section class="container" style="padding-top:100px">
+    <div class="container has-text-centered" style="margin-bottom:70px">
+      <h1 class="title has-text-weight-light is-size-3" >
+       How it works
+      </h1>
+      
+      <div class="columns ">
+      <div class="column"></div>
+        <div class="column is-two-thirds has-text-grey-light is-light subtitle has-text-weight-light is-size-4 is-paddingless">
+        <div > Create agreements with ease and store safely on the blockchain. </div>
+      </div> 
+      <div class="column"></div>      
+    </div>
+    </div>
+
+    <div class="columns ">
+      <div class="column">
+        <img src="img/slider-1.png" alt="Agreements" style />
+      </div>
+      <div  class="column">
+          <slider-render-all  
+            v-on:enlarge-text="postFontSize += $event"
+            :arrays="imgSlider" 
+            :style="{fontSize:postFontSize + 'em'}"
+            
+          >
+          </slider-render-all>
+  
+      </div>
+    </div>
+  </section>
 
 
 

@@ -33,7 +33,7 @@ Vue.component('features-section', {
   `
 })
 
-// header 
+// Header 
 Vue.component('header-component', {
   props: ['array'],
   template: 
@@ -65,9 +65,39 @@ Vue.component('header-component', {
             
          </div> 
    </div>
+   </div>
   </nav> 
   </section>
   	
+  `
+})
+
+Vue.component('slider-render-all', {
+  props: ['arrays'],
+  template: 
+  `
+  <ul class="slider">
+  	<slider-item 
+  		v-for="item in arrays" 
+  		:name="item.name"
+  	>
+  	</slider-item>
+  </ul>
+  `
+})
+
+
+Vue.component('slider-item', {
+  props: ['name', 'currentSlide'],
+  data: function () {
+    return {
+      count: 0,
+      isActive: false,
+    }
+  },
+  template: 
+  `
+  	<li  :class="{ active:isActive }"> <a v-on:click="count++, isActive = true" > {{name}} {{count}} </a></li>
   `
 })
 
@@ -75,6 +105,8 @@ Vue.component('header-component', {
 var app = new Vue({
   el: '#app',
   data: {
+  	postFontSize: 1,
+  	currentSlide:1,
     Header: 'Agreements on the Ethereum blockchain Github',
     Subheader: 'Create agreements with ease and store safely on the blockchain.',
     ButtonLink: 'Check our Prototype',
@@ -99,6 +131,22 @@ var app = new Vue({
     		description:'Both parties can rest assure the documents they signed are stored in a safe and immutable way.', 
     		img:'img/lock.svg' 
     	},
+    ],
+    imgSlider: [
+    	{
+    		name:'Create an agreement with a simple form.',
+    		img:'img/slider-1.png',
+    	},
+    	{
+    		name:'Sign contract on the blockchain.',
+    		img:'img/slider-1.png',
+    	},
+    	{
+    		name:'Transfer payments in ETH once work is delivered.',
+    		img:'img/slider-1.png',
+    	},
+
     ]
+
   }
 })
