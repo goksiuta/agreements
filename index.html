@@ -31,11 +31,11 @@
      <!-- Right side !--> 
      <div class="navbar-menu">
          <div class="navbar-end">
-            <p class="navbar-item">
-              <a href="#">
-                How it work
+            <p v-for="item in menu" class="navbar-item">
+              <a :href="item.link">
+               {{item.value}}
               </a>
-          </p>
+           </p>
 
           <p class="navbar-item">
               <a class="button" href="#">
