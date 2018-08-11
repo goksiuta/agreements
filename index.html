@@ -36,6 +36,39 @@
       width: 100%;
       letter-spacing: 0.1px
        }
+      .use-case {
+        background-color: #F5F6F7; 
+        padding:100px 0 ;
+      }
+       .card-dropshadow {
+        min-height: 380px;
+        background: #FFFFFF;
+        padding: 52px;
+        box-shadow: 0 15px 18px 0 rgba(164,164,164,0.16);
+        border-radius: 4px;
+        margin:10px;
+        display: flex;
+        flex-direction:column;
+        justify-content:space-between; 
+       }
+
+       .card-dropshadow a {align-self:end; }
+       .card-dropshadow p { margin-top: 20px}
+
+       .footer {
+          height: 800px;
+          background: 
+          linear-gradient(
+            rgba(0, 0, 0, 0.55), 
+            rgba(0, 0, 0, 0.55)
+          ),
+          url(img/footer.png);
+          background-size: cover; 
+          display: flex;
+          align-items:center;
+          justify-content: center;
+
+       }
 
     </style>
   </head>
@@ -75,7 +108,7 @@
 
 
   <!-- How it works -->
-  <section class="container" style="padding-top:100px">
+  <section class="container" style="padding:100px 0 ">
     <div class="container has-text-centered" style="margin-bottom:70px">
       <h1 class="title has-text-weight-light is-size-3" >
        How it works
@@ -94,12 +127,9 @@
       <div class="column">
         <img src="img/slider-1.png" alt="Agreements" style />
       </div>
-      <div  class="column">
+      <div class="column">
           <slider-render-all  
-            v-on:enlarge-text="postFontSize += $event"
             :arrays="imgSlider" 
-            :style="{fontSize:postFontSize + 'em'}"
-            
           >
           </slider-render-all>
   
@@ -107,6 +137,31 @@
     </div>
   </section>
 
+
+<!-- USE CASES -->
+<use-cases :array="useCases"> </use-cases>
+
+
+<!-- TEST -->
+
+
+<div >
+  <div :style="{ fontSize: postFontSize + 'em' }">
+    <blog-post v-on:enlarge-text="postFontSize += $event"
+      v-for="post in posts"
+      v-bind:key="post.id"
+      v-bind:post="post"
+    ></blog-post>
+  </div>
+</div>
+
+
+
+<!-- FOOTER -->
+<section class="footer">
+<h2 class="has-text-white has-text-weight-light is-size-4">No room for deliberate ambiguity,</h2>
+<div> <input type="text"/><button>Send</button></div>
+</section>
 
 
 

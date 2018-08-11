@@ -72,23 +72,54 @@ Vue.component('header-component', {
   `
 })
 
+// Use Cases 
+
+Vue.component('use-cases', {
+  props: ['array'],
+  template: 
+  `
+  <section class="use-case"> 
+  <div class="container">
+  <h2 class="title has-text-weight-light is-size-3 has-text-centered" >
+       Use Cases
+      </h2>
+    <div class="columns">
+      <div v-for="item in array" class="column">
+        <div class="card-dropshadow">
+          <div>
+          <h2 class="has-text-dark has-text-weight-light is-size-4">{{item.value}} </h2>
+          <p class="has-text-grey has-text-weight-medium is-size-5">{{item.description}}.</p>
+          </div>
+          <a href="">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+  `
+})
+
+
+// Render all items in slider
 Vue.component('slider-render-all', {
   props: ['arrays'],
   template: 
   `
   <ul class="slider">
   	<slider-item 
-  		v-for="item in arrays" 
+  		v-for="(item, index) in arrays" 
   		:name="item.name"
+      :index="index"
   	>
   	</slider-item>
   </ul>
   `
 })
 
-
+// One line slider
 Vue.component('slider-item', {
-  props: ['name', 'currentSlide'],
+  props: ['name', 'currentSlide', 'index'],
   data: function () {
     return {
       count: 0,
@@ -97,15 +128,51 @@ Vue.component('slider-item', {
   },
   template: 
   `
-  	<li  :class="{ active:isActive }"> <a v-on:click="count++, isActive = true" > {{name}} {{count}} </a></li>
+  	<li :class="{}"> 
+    <a 
+    v-on:click="count++, isActive ? isActive=false : isActive=true"
+    > 
+    {{name}} {{count}} {{index}}
+    </a>
+    </li>
+  `
+})
+
+
+Vue.component('blog-post', {
+  props: ['post'],
+  template: `
+    <div class="blog-post">
+      <h3>{{ post.title }}</h3>
+      <button v-on:click="$emit('enlarge-text', 0.1)">
+        Enlarge text
+      </button>
+      <div v-html="post.content"></div>
+    </div>
   `
 })
 
 
 var app = new Vue({
   el: '#app',
+  methods: {
+      update_current_slider: function (newCurrentSlider) 
+      {
+        return this.currentSlide = newCurrentSlider
+      },
+      show_current_slider: function () 
+      {
+        return this.currentSlide
+      },
+
+  },
   data: {
   	postFontSize: 1,
+    posts: [
+      { id: 1, title: 'My journey with Vue' },
+      { id: 2, title: 'Blogging with Vue' },
+      { id: 3, title: 'Why Vue is so fun' },
+    ],
   	currentSlide:1,
     Header: 'Agreements on the Ethereum blockchain Github',
     Subheader: 'Create agreements with ease and store safely on the blockchain.',
@@ -146,7 +213,12 @@ var app = new Vue({
     		img:'img/slider-1.png',
     	},
 
-    ]
+    ],
+    useCases: [
+      { value: 'Hiring remote freelancers ', description: 'Ensure a smooth hiring process by creating agreements in a flash and sharing them with your contractors.  ' },
+      { value: 'Customized agreements ', description: 'You can adjust each agreement to your needs. ' },
+      { value: 'Buil reputation as a contractor   ', description: 'Maintain a well organized, modern contracting system that will enhance your business.' },
+    ],
 
   }
 })
