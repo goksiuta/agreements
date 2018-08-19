@@ -58,7 +58,7 @@ Vue.component('header-component', {
            </p>
 
           <p class="navbar-item">
-              <a class="button" href="#">
+              <a class="button" href="mailto:maxmice@gmail.com">
                 Contact
               </a>
           </p>
@@ -90,7 +90,7 @@ Vue.component('use-cases', {
           <h2 class="has-text-dark has-text-weight-light is-size-4">{{item.value}} </h2>
           <p class="has-text-grey has-text-weight-medium is-size-5">{{item.description}}.</p>
           </div>
-          <a href="">Read more</a>
+          <a href=""></a>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@ Vue.component('slider-item', {
     <a 
     v-on:click="count++, isActive ? isActive=false : isActive=true"
     > 
-    {{name}} {{count}} {{index}}
+    {{name}}
     </a>
     </li>
   `
@@ -174,13 +174,13 @@ var app = new Vue({
       { id: 3, title: 'Why Vue is so fun' },
     ],
   	currentSlide:1,
-    Header: 'Agreements on the Ethereum blockchain Github',
+    Header: 'Agreements on the Ethereum blockchain',
     Subheader: 'Create agreements with ease and store safely on the blockchain.',
     ButtonLink: 'Check our Prototype',
     menu: [
-      { value: 'Home', link: 'home' },
-      { value: 'How it works', link: 'how-it-works' },
-      { value: 'Prototype', link: 'prototype' },
+      { value: ' ', link: 'home' },
+      { value: ' ', link: 'how-it-works' },
+      { value: ' ', link: 'prototype' },
     ],
     features: [
     	{
